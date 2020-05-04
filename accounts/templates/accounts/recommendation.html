@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recommendation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="{% static 'css/recommendation.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+  </head>
+  <body>
+
+        <div class="main">
+          <section class="header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="#"> <h1> <a href="{% url 'accounts:recommendation' %}">RECOMMENDED DOCTORS</a> </h1> </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'intro' %}">INTRODUCTION</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.practo.com/kolkata/cardiologist" target="_blank">SEE MORE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:logout'%}">LOGOUT</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </section>
+        </div>
+
+        <div class="body">
+          <div class="container">
+            <div class="box">
+              <div class="content">
+                <h4>{{ doctor11 }}</h4> <br>
+                <h4>{{ doctor12 }}</h4><br>
+                <h4>{{ doctor13 }}</h4><br>
+                <h4>{{ doctor14 }}</h4><br>
+              </div>
+            </div>
+            <div class="box">
+              <div class="content">
+                <h4>{{ doctor21 }}</h4> <br>
+                <h4>{{ doctor22 }}</h4><br>
+                <h4>{{ doctor23 }}</h4><br>
+                <h4>{{ doctor24 }}</h4><br>
+              </div>
+            </div>
+            <div class="box">
+              <div class="content">
+                <h4>{{ doctor31 }}</h4> <br>
+                <h4>{{ doctor32 }}</h4><br>
+                <h4>{{ doctor33 }}</h4><br>
+                <h4>{{ doctor34 }}</h4><br>
+              </div>
+            </div>
+          </div>
+          <svg>
+              <filter id="wavy">
+                <feTurbulence x="0" y="0" id="turbulence" baseFrequency="0.01" numOctaves="5" seed="2">
+                  <animate attributeName="baseFrequency" dur="60s" values="0.01;0.05;0.01" repeatCount="indefinite" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" scale="30" />
+              </filter>
+          </svg>
+        </div>
+
+
+
+
+</body>
+</html>

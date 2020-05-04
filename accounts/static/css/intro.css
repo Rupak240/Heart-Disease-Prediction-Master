@@ -1,0 +1,694 @@
+
+
+/* Orange color: #e67e22*/
+
+/* BASIC SETUP */
+.{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato','sans-serif';
+  font-size: 20px;
+  font-weight: 300px;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* REUSEABLE COMPONENTS */
+
+.row{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 50px 0;
+}
+
+
+.box {
+  padding: 1%;
+}
+
+
+
+
+
+
+.page-header {
+    height: 100vh;
+    max-height: 1050px;
+    padding: 0;
+    color: #FFFFFF;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+}
+
+.page-header .page-header-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.page-header footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.page-header .container {
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    position: relative;
+}
+
+.page-header .container .content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+    float: left;
+    text-transform: uppercase;
+    text-shadow: 8px;
+    padding: 0 15px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 880px;
+}
+
+.page-header .category,
+.page-header .description {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.page-header.page-header-small {
+    height: 100vh;
+    max-height: 740px;
+}
+
+.page-header:after,
+.page-header:before {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+}
+
+.page-header:before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-header[filter-color="orange"] {
+    background: rgba(44, 44, 44, 0.2);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    /* Standard syntax */
+}
+
+.page-header .container {
+    z-index: 2;
+}
+
+
+
+/* #################### FOOTER ###################### */
+
+.footer{
+  padding: 24px 0;
+  display: grid;
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.footer .about-us {
+  padding-left: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+
+}
+
+
+.footer .about-us p a {
+  color: #fff;
+  opacity: 2000;
+}
+
+.footer .about-us p a:hover {
+  color: skyblue;
+  opacity: 10000;
+  /* font-weight: bolder; */
+}
+
+
+.footer {
+    padding: 24px 0;
+    padding-bottom: 70px;
+}
+
+.footer.footer-default {
+    background-color: #13392A;
+}
+
+
+.footer .copyright {
+    font-size: 0.850em;
+    color: #fff;
+    text-align: center;
+
+}
+footer .move-up{
+    position: absolute;
+    float: right;
+    right: 6%;
+    top: 50%;
+}
+
+
+footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.section-features h1, h2 ,h3
+{
+
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+
+.section-features h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 200%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+
+}
+
+.section-features h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+
+}
+
+.section-features h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+
+}
+
+.section-features h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* ----- PARAGRAPHS--------*/
+.section-features .long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  text-align: justify;
+}
+
+.section-features .box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+
+.section-features .icon-big {
+  font-size: 350%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+
+
+.btn:link,
+.btn-visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn:hover,
+.btn-active {
+  background-color: #cf6d17;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: #cf6d17;
+  border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #cf6d17;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 20%;
+  text-overflow: clip;
+  font-weight: bold;
+}
+
+
+
+header{
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+}
+
+.hero-text-box{
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  float: left;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text-box h1{
+  color: #fff;
+  font-weight: 50px;
+  text-transform: uppercase;
+}
+
+.hero-text-box a{
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo{
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+
+.main-nav{
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
+
+
+
+
+.section-features .long-copy {
+  margin-bottom: 60px;
+}
+
+.section-features .long-copy .bold{
+  text-align: center;
+  width: 50%;
+  margin-left: 30px;
+}
+
+
+
+
+
+/* ########################   Head   ###################### */
+
+.head h1, h2 ,h3
+{
+
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+
+.head h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 200%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+
+}
+
+.head h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+
+}
+
+.head h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+
+}
+
+.head h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ################        HOVER            ######## */
+
+
+
+
+.hover h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+
+}
+
+.hover h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+
+}
+
+.hover h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+
+.hover{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+ .hover .container{
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+
+.hover .container .card{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.hover .container .card .face{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hover .container .card .face.face1{
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.hover .container .card .face.face1:nth-child(1)
+
+
+.hover .container .card .face.face1 h3{
+  margin: 0;
+  padding: 0;
+}
+
+.hover .container .card .face.face1 .content h3{
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.hover .container .card .face.face1 .content h3{
+  text-align: center;
+}
+
+.hover .container .card .face.face1 .content h4{
+  text-align: center;
+}
+
+.hover .container .card .face.face2{
+  background: #111;
+  transition: 0.5s;
+}
+
+
+.hover .container .card:hover .face.face2{
+  height: 60px;
+}
+
+
+.hover .container .card .face.face2:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, .1);
+}
+
+
+.hover .container .card .face.face2 h2{
+  margin: 0;
+  padding: 0;
+  font-size: 1.0em;
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.hover .container .card:hover .face.face2 h2{
+  font-size: 0.6em;
+}
+
+
+
+
+
+
+
+
+
+/* ################### REASON   ########### */
+
+
+
+.reason{
+  margin-bottom: 80px;
+}
+
+
+.reason h1, h2 ,h3
+{
+
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+
+.reason h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 200%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+
+}
+
+.reason h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+
+}
+
+.reason h3 {
+  font-size: 140%;
+  margin-bottom: 8px;
+  font-style: italic;
+
+}
+
+.reason h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+
+.reason h3 {
+  word-spacing: 2px;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+
+}
+
+.reason h3:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+
+/* ----- PARAGRAPHS--------*/
+.reason .long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+}
+
+.reason .box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+
+.reason .icon-big {
+  font-size: 350%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+}

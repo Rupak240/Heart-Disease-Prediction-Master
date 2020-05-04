@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recommendation</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="{% static 'css/r1.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-header__nav">
+        <a class="header-heading" href="#"> <h1>RECOMMENDED DOCTOR</h1> </a>
+        <ul class="main-header__item-list">
+          <li class="main-header__item"> <a class="active" href="/add-product">ProfileView</a> </li>
+          <li class="main-header__item"> <a class="active" href="/add-product">See more</a> </li>
+          <li class="main-header__item"> <a class="active" href="/add-product">Logout</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="part">
+      <div class="container">
+        <div class="box">
+            <div class="content">
+              <h2>01</h2>
+              <h3>Recommendation</h3>
+              <h4>{{ doctor11 }}</h4> <br>
+              <h4>{{ doctor12 }}</h4><br>
+              <h4>{{ doctor13 }}</h4><br>
+              <h4>{{ doctor14 }}</h4><br>
+            </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <h2>02</h2>
+            <h3>Recommendation</h3>
+            <h4>{{ doctor21 }}</h4> <br>
+            <h4>{{ doctor22 }}</h4><br>
+            <h4>{{ doctor23 }}</h4><br>
+            <h4>{{ doctor24 }}</h4><br>
+          </div>
+        </div>
+        <!-- <div class="box">
+          <div class="content">
+            <h2>03</h2>
+            <h3>Recommendation</h3>
+            <h4>{{ doctor31 }}</h4> <br>
+            <h4>{{ doctor32 }}</h4><br>
+            <h4>{{ doctor33 }}</h4><br>
+            <h4>{{ doctor34 }}</h4><br>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <h2>04</h2>
+            <h3>Recommendation</h3>
+            <h4>{{ doctor41 }}</h4> <br>
+            <h4>{{ doctor42 }}</h4><br>
+            <h4>{{ doctor43 }}</h4><br>
+            <h4>{{ doctor44 }}</h4><br>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+  </body>
+</html>

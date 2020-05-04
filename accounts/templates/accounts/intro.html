@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="{% static 'css/normalize.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/grid.css.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/intro.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/ionicons.min.css' %}" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <title>Introduction</title>
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+        <div class="page-header page-header-small ">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('{% static 'images/heart_leaves.jpg' %}');">
+            </div>
+            <div class="container">
+                <div class="content-center">
+                    <div class="hero-text-box">
+                      <h1>Heart Disease Prediction &mdash; <br> Dataset &mdash; Classification with various models. </h1>
+                      <a class="btn btn-ghost" href="{% url 'about' %}">About</a>
+                      <a class="btn btn-ghost" href="{% url 'accounts:register' %}">Sign Up</a>
+                      <a class="btn btn-ghost" href="{% url 'user_login' %}">Log in </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+                    <div class="section-features">
+                      <div class="row">
+                        <h2>About Dataset &mdash; Introduction</h2>
+                        <p class="long-copy">Heart disease describes a range of conditions that affect your heart.
+                          Diseases under the heart disease umbrella include blood vessel diseases, such as coronary
+                          artery disease, heart rhythm problems (arrhythmias) and heart defects you’re born with
+                          (congenital heart defects), among others. <br><br>The term “heart disease” is often used interchangeably
+                          with the term “cardiovascular disease”. Cardiovascular disease generally refers to conditions
+                          that involve narrowed or blocked blood vessels that can lead to a heart attack, chest pain
+                          (angina) or stroke. Other heart conditions, such as those that affect your heart’s muscle,
+                          valves or rhythm, also are considered forms of heart disease.<br><br>
+                        <strong class="bold">About 610,000 people die of heart disease in the United States every year–that’s 1 in every 4 deaths.1
+                          Heart disease is the leading cause of death for both men and women. More than half of the deaths due to
+                          heart disease in 2009 were in men.<br>
+                          <br>Coronary Heart Disease(CHD) is the most common type of heart disease, killing over 370,000 people annually.<br>
+                          <br>Every year about 735,000 Americans have a heart attack. Of these, 525,000 are a first heart attack and 210,000
+                          happen in people who have already had a heart attack.</strong><br>
+
+                          <br>This makes heart disease a major concern to be dealt with. But it is difficult to identify heart disease because of several contributory risk factors such as diabetes, high blood pressure, high cholesterol, abnormal pulse rate, and many other factors. Due to such constraints, scientists have turned towards modern approaches like Data Mining and Machine Learning for predicting the disease.<br>
+                          <br>Machine learning (ML) proves to be effective in assisting in making decisions and predictions from the large quantity of data produced by the healthcare industry.<br>
+                          <br>In this project, we will be applying Machine Learning algorithms included <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html" target="_blank">SupportVectorClassifier</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html" target="_blank">DecisionTreeClassifier</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html" target="_blank" >LogisticRegression</a> , <a href="https://scikit-learn.org/stable/modules/naive_bayes.html" target="_blank">NaiveBayesClassifier</a>, <a href="https://xgboost.readthedocs.io/en/latest/python/python_api.html" target="_blank">XgBoostClassifier</a>  and <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html" target="_blank">RandomForestClassifier</a> for classifying whether a person is suffering from heart disease or not, using a dataset.
+                        </p>
+                      </div>
+
+
+                      <div class="row">
+                        <h2>The Data &mdash; Columns</h2>
+                        <p class="long-copy">The dataset used in this project is the Cleveland Heart Disease dataset taken from the UCI repository. The dataset consists of 303 individuals data. There are 14 columns in the dataset, which are described below &mdash;</p>
+                      </div>
+                    </div>
+
+
+                        <div class="hover">
+                          <div class="container">
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays the Age of an individual.</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>AGE</h2>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays the Gender of an individual. <br> <br>1 = male <br> 0 = female </h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Sex</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays the type of Chest-pain experienced by an individual: <br> <br>1 = typical angina <br>2 = atypical angina <br>3 = non-anginal pain <br>4 = asymptotic</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2> <strong>Chest Pain Type</strong></h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays the resting blood pressure value in mmHg (unit)</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Resting Blood Pressure</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays the serum cholesterol in mg/dl (unit)</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Serum Cholestrol</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Fasting blood sugar value with 120mg/dl. <br> <br>FBS>120mg/dl : 1(true) <br>else : 0(false)</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Fasting Blood Sugar</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays resting electrocardiographic results <br> <br>
+                                    0 = normal <br>
+                                    1 = having ST-T wave abnormality <br>
+                                    2 = left ventricular hyperthrophy</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Resting ECG</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays the max heart rate achieved by an individual.</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Maximum Heart Rate achieved</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3> 1 = Yes <br>0 = No</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Induced Angina</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays the value which is an integer or float.</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>ST depression induced by exercise relative to rest</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>1 = upsloping <br>2 = flat <br>3 = downsloping</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Peak exercise ST segment</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays the value as integer or float.</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Number of major vessels (0–3) colored by flourosopy </h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>3 = normal <br>
+                                      6 = fixed defect <br>
+                                      7 = reversible defect</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Thal</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="face face1">
+                                <div class="content">
+                                  <h3>Displays whether the individual is suffering from heart disease or not: <br> <br>
+                                    0 = Absence <br>
+                                    1 = Present.</h3>
+                                </div>
+                              </div>
+                              <div class="face face2">
+                                <div class="content">
+                                  <h2>Diagnosis of heart disease</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="reason">
+                          <div class="row">
+                            <h2>This Parameters &mdash; Why?</h2>
+                            <p class="long-copy">In the dataset, we had 76 features but for our study, we chose only the above 14 because:</p>
+
+                            <li>
+
+                              <ol>
+                                <h3>Age :</h3>
+                                <p class="long-copy">Age is the most important risk factor in developing cardiovascular or heart diseases, with approximately
+                                a tripling of risk with each decade of life. Coronary fatty streaks can begin to form in adolescence.
+                                It is estimated that 82 percent of people who die of coronary heart disease are 65 and older.
+                                Simultaneously, the risk of stroke doubles every decade after age 55.</p>
+                              </ol>
+
+                              <ol>
+                                <h3>Sex: </h3>
+                                <p class="long-copy">Men are at greater risk of heart disease than pre-menopausal women.
+                                  Once past menopause, it has been argued that a woman’s risk is similar to a man’s although
+                                  more recent data from the WHO and UN disputes this. If a female has diabetes, she is more
+                                  likely to develop heart disease than a male with diabetes.</p>
+                              </ol>
+
+                              <ol>
+                                <h3>Angina (Chest Pain): </h3>
+                                <p class="long-copy">Angina is chest pain or discomfort caused when your heart muscle doesn’t get
+                                  enough oxygen-rich blood. It may feel like pressure or squeezing in your chest. The discomfort
+                                  also can occur in your shoulders, arms, neck, jaw, or back. Angina pain may even feel like indigestion.</p>
+                              </ol>
+
+
+                              <ol>
+                                <h3>Resting Blood Pressure: </h3>
+                                <p class="long-copy">Over time, high blood pressure can damage arteries that feed your heart.
+                                   High blood pressure that occurs with other conditions, such as obesity, high cholesterol
+                                   or diabetes, increases your risk even more.</p>
+                              </ol>
+
+
+                              <ol>
+                                <h3>Serum Cholesterol: </h3>
+                                <p class="long-copy">A high level of low-density lipoprotein (LDL) cholesterol (the “bad” cholesterol)
+                                  is most likely to narrow arteries. A high level of triglycerides, a type of blood fat related to your
+                                   diet, also ups your risk of a heart attack. However, a high level of high-density lipoprotein (HDL)
+                                   cholesterol (the “good” cholesterol) lowers your risk of a heart attack.</p>
+                              </ol>
+
+
+                              <ol>
+                                <h3>Fasting Blood Sugar: </h3>
+                                <p class="long-copy">Not producing enough of a hormone secreted by your pancreas (insulin) or not
+                                  responding to insulin properly causes your body’s blood sugar levels to rise, increasing your
+                                  risk of a heart attack.</p>
+                              </ol>
+
+
+
+                              <ol>
+                                <h3>Resting ECG: </h3>
+                                <p class="long-copy">For people at low risk of cardiovascular disease, the USPSTF concludes with
+                                  moderate certainty that the potential harms of screening with resting or exercise ECG equal or
+                                  exceed the potential benefits. For people at intermediate to high risk, current evidence is
+                                  insufficient to assess the balance of benefits and harms of screening.</p>
+                              </ol>
+
+
+
+
+                              <ol>
+                                <h3>Max heart rate achieved: </h3>
+                                <p class="long-copy">The increase in cardiovascular risk, associated with the acceleration
+                                  of heart rate, was comparable to the increase in risk observed with high blood pressure.
+                                  It has been shown that an increase in heart rate by 10 beats per minute was associated with
+                                  an increase in the risk of cardiac death by at least 20%, and this increase in the risk is
+                                  similar to the one observed with an increase in systolic blood pressure by 10 mm Hg.</p>
+                              </ol>
+
+
+
+                              <ol>
+                                <h3>Exercise induced angina: </h3>
+                                <p class="long-copy">The pain or discomfort associated with angina usually feels tight,
+                                  gripping or squeezing, and can vary from mild to severe. Angina is usually felt in the
+                                  center of your chest but may spread to either or both of your shoulders, or your back,
+                                  neck, jaw or arm. It can even be felt in your hands. o Types of Angina a.
+                                  Stable Angina / Angina Pectoris b. Unstable Angina c. Variant (Prinzmetal) Angina d. Microvascular Angina.</p>
+                              </ol>
+
+
+                              <ol>
+                                <h3>ST depression induced by exercise relative to rest: </h3>
+                                <p class="long-copy">It is often a sign of myocardial ischemia, of which coronary insufficiency
+                                   is a major cause.In unstable coronary artery disease, ST-segment depression is associated with
+                                   a 100% increase in the occurrence of three-vessel/left main disease and to an increased risk of
+                                   subsequent cardiac events. In these patients an early invasive strategy substantially decreases
+                                   death/myocardial infarction.</p>
+                              </ol>
+
+
+                              <ol>
+                                <h3>Peak exercise ST segment: </h3>
+                                <p class="long-copy">A treadmill ECG stress test is considered abnormal when there is a horizontal
+                                   or down-sloping ST-segment depression ≥ 1 mm at 60–80 ms after the J point. Exercise ECGs with
+                                   up-sloping ST-segment depressions are typically reported as an ‘equivocal’ test. In general, the
+                                   occurrence of horizontal or down-sloping ST-segment depression at a lower workload (calculated in METs)
+                                   or heart rate indicates a worse prognosis and higher likelihood of multi-vessel disease. The duration
+                                   of ST-segment depression is also important, as prolonged recovery after peak stress is consistent
+                                   with a positive treadmill ECG stress test. Another finding that is highly indicative of significant
+                                   CAD is the occurrence of ST-segment elevation > 1 mm (often suggesting transmural ischemia);
+                                   these patients are frequently referred urgently for coronary angiography.</p>
+                              </ol>
+
+
+                              <ol>
+                                <h3>Number of major vessels (0–3) colored by flourosopy: </h3>
+                                <p class="long-copy">A heart scan (coronary calcium scan)
+                                   provides pictures of your heart's arteries. Doctors may use this test to look for calcium
+                                   deposits in the coronary arteries that can narrow your arteries and increase your heart attack
+                                   risk.The image on the right shows a coronary calcium scan.</p>
+                              </ol>
+
+                              <ol>
+                                <h3>Thal: </h3>
+                                <p class="long-copy">Doctors diagnose thalassemias using blood tests, including a complete blood
+                                   count (CBC) and special hemoglobin tests. A CBC measures the amount of hemoglobin and the different
+                                   kinds of blood cells, such as red blood cells, in a sample of blood.</p>
+                              </ol>
+
+                          </li>
+                          </div>
+                        </div>
+
+
+
+
+
+        <footer class="footer footer-default">
+            <div class="container">
+
+                <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                    <p> <a href="{% url 'user_login' %}">Login</a>  |  <a href="{% url 'intro' %}">Introduction</a>  |  <a href="{% url 'about' %}">About</a></p>
+                </div>
+                <p></p>
+                <p>  </p>
+                <p></p>
+                <div class="copyright">
+                   Coded by Prafull, Priyam, Ritambhara, Rupak and Sampriti
+                </div>
+            </div>
+            <div class="move-up">
+                <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+</body>
+<script src="{% static 'js/jquery.3.2.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/popper.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/bootstrap_ui_kit.js' %}" type="text/javascript"></script>
+</html>
